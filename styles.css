@@ -1,0 +1,114 @@
+@page {
+    size: A4;
+    margin: 20mm;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2b2b2b;
+    line-height: 1.5;
+    background-color: #ffffff;
+    /* Deixa sempre um espaço em branco grande no final da página para facilitar a criação de novos blocos */
+    padding-bottom: 250px; 
+}
+
+@media print {
+    #btn-salvar {
+        display: none;
+    }
+}
+
+h1 {
+    color: #1a365d;
+    border-bottom: 3px solid #2b6cb0;
+    padding-bottom: 8px;
+    margin-top: 0;
+    font-size: 24pt;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h2 {
+    color: #2b6cb0;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 24px;
+    font-size: 14pt;
+    text-transform: uppercase;
+}
+h3 {
+    color: #2d3748;
+    font-size: 11pt;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+p, li {
+    font-size: 10pt;
+}
+ul {
+    margin-top: 4px;
+    padding-left: 20px;
+}
+li {
+    margin-bottom: 4px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 9.5pt;
+}
+th, td {
+    border: 1px solid #cbd5e0;
+    padding: 7px 10px;
+    text-align: left;
+}
+th {
+    background-color: #ebf8ff;
+    color: #2c5282;
+    font-weight: bold;
+}
+tr:nth-child(even) {
+    background-color: #f7fafc;
+}
+.highlight {
+    background-color: #edf2f7;
+    border-left: 4px solid #3182ce;
+    padding: 10px 14px;
+    margin: 12px 0;
+    font-size: 9.5pt;
+}
+.code-inline {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #edf2f7;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-weight: bold;
+    color: #805ad5;
+}
+.grid-2col {
+    display: flex;
+    gap: 20px;
+}
+.grid-2col > div {
+    flex: 1;
+}
+
+[contenteditable="true"] {
+    outline: 1px solid #3182ce;
+    border-radius: 2px;
+    background-color: #f7fafc;
+    min-height: 20px;
+}
+
+@media print {
+    body {
+        margin: 20mm;
+        background: white !important;
+        color: black !important;
+    }
+    /* Oculta qualquer elemento que não seja o conteúdo do documento na hora de salvar */
+    .no-print {
+        display: none !important;
+    }
+}
